@@ -8,7 +8,7 @@ bool countDouplicate(vector<int>&nums){
     unordered_set<int>freq;
 
     for(int num : nums){
-        if(freq.contains(num)){
+        if(freq.find(num)!= freq.end()){
             return true;
         }
         freq.insert(num);
